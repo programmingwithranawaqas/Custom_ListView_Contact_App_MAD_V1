@@ -22,14 +22,6 @@ public class ListF extends Fragment {
         // Required empty public constructor
     }
 
-    /*
-    @Override
-    public void onListItemClick(@NonNull ListView l, @NonNull View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-
-        Toast.makeText(requireContext(), ""+position, Toast.LENGTH_SHORT).show();
-    }
-     */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,28 +29,6 @@ public class ListF extends Fragment {
         return inflater.inflate(R.layout.fragment_list, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        ListView lvContacts = view.findViewById(R.id.lvContacts);
-        ContactAdapter adapter = new ContactAdapter(requireContext(), MyApplication.contacts);
-        lvContacts.setAdapter(adapter);
-
-        /*
-          // build-in design with build-in adapter
-        ArrayList<String> names = new ArrayList<>();
-        names.add("Ali");
-        names.add("Raza");
-        names.add("Mubeen");
-        names.add("Osama");
-        names.add("Khadim");
-        names.add("Scroll");
-        names.add("Abu");
-        setListAdapter(new ArrayAdapter<String>(requireContext(), android.R.layout.simple_dropdown_item_1line, names));
-*/
-
-    }
 }
 
 
